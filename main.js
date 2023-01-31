@@ -10,6 +10,7 @@ function abrirJanela() {
 }
 
 function intervaloAbrirJanela() {
+    alert("A função será executada em 10 minutos.")
     setInterval(abrirJanela, 600000)
 }
 

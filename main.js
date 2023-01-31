@@ -6,7 +6,6 @@ let janelaAberta;
 
 function abrirJanela() {
   janelaAberta = window.open('pagina-aberta.html', "_blank", "width=300, height=300");
-  
 }
 
 function intervaloAbrirJanela() {

@@ -8,16 +8,20 @@ body {
     background: rgb(163, 152, 152);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 main {
     width: 100vw;
     height: 100vh;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    flex-direction: column;
 }
 
 #btnIniciar {
@@ -25,10 +29,11 @@ main {
     height: 75px;
     border: none;
     border-radius: 50px;
-    background-color: darkcyan;
+    background-color: lime;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 #btnParar {
@@ -36,8 +41,29 @@ main {
     height: 75px;
     border: none;
     border-radius: 50px;
-    background-color: firebrick;
+    background-color: red;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.container-timer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+.container-timer p {
+    width: 518px;
+}
+
+#timer {
+    width: 6vw;
+    align-self: center;
+    justify-self: center;
 }

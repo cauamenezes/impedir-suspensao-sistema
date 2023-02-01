@@ -5,12 +5,7 @@ const btnParar = document.getElementById("btnParar");
 let janelaAberta;
 
 function abrirJanela() {
-  janelaAberta = window.open('pagina-aberta.html', "_blank", "width=300, height=300");
-}
-
-function intervaloAbrirJanela() {
-    alert("A função será executada em 10 minutos.")
-    setInterval(abrirJanela, 600000)
+  janelaAberta = window.open('pagina-aberta.html', "_blank", "width=375, height=300");
 }
 
 function fecharJanela() {
@@ -21,6 +16,44 @@ function fecharJanelaPrincipal() {
     window.close()
 }
 
-btnIniciar.addEventListener('click', intervaloAbrirJanela)
+function iniciarTimer(duracao, exibir) {
+
+    let timer = duracao, minutos, segundos;
+
+    setInterval(function() {
+
+        minutos = parseInt(timer / 60, 10);
+        segundos = parseInt(timer % 60, 10);
+
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        exibir.textContent = minutos + ":" + segundos;
+
+        if(--timer < 0) {
+            timer = duracao;
+        }
+
+    }, 1000);
+}
+
+// function zerarTimer() {
+//     iniciarTimer(0, exibir);
+// }
+
+window.onload = function() {
+
+    let duracao = 60 * 5; //Conversão para segundos
+    let exibir = document.querySelector("#timer"); //Elemento para exibir o timer
+
+    iniciarTimer(duracao, exibir); //Inicia a função
+
+    setTimeout(abrirJanela, 1000);
+    setTimeout(fecharJanela, 11000);
+    // setInterval(zerarTimer, 30000)
+    setInterval(abrirJanela, 300000)
+    setInterval(fecharJanela, 310000);
+
+}
+
 btnParar.addEventListener('click', fecharJanelaPrincipal)
-setInterval(fecharJanela, 600001)

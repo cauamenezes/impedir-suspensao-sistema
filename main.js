@@ -1,7 +1,7 @@
 "use strict"
 
 const btnIniciar = document.getElementById("btnIniciar");
-const btnParar = document.getElementById("btnParar");
+const btnEncerrar = document.getElementById("btnEncerrar");
 let janelaAberta;
 
 function abrirJanela() {
@@ -52,4 +52,4 @@ window.onload = function() {
 
 }
 
-btnParar.addEventListener('click', fecharJanelaPrincipal)
+btnEncerrar.addEventListener('click', fecharJanelaPrincipal)

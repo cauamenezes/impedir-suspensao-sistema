@@ -5,7 +5,7 @@ const btnParar = document.getElementById("btnParar");
 let janelaAberta;
 
 function abrirJanela() {
-  janelaAberta = window.open('pagina-aberta.html', "_blank", "width=375, height=300");
+  janelaAberta = window.open('pagina-aberta.html', "_blank", "width=550, height=300, top=250, left= 400");
 }
 
 function fecharJanela() {
@@ -37,10 +37,6 @@ function iniciarTimer(duracao, exibir) {
     }, 1000);
 }
 
-// function zerarTimer() {
-//     iniciarTimer(0, exibir);
-// }
-
 window.onload = function() {
 
     let duracao = 60 * 5; //Conversão para segundos
@@ -51,7 +47,7 @@ window.onload = function() {
     setTimeout(abrirJanela, 1000);
     setTimeout(fecharJanela, 11000);
     // setInterval(zerarTimer, 30000)
-    setInterval(abrirJanela, 300000)
+    setInterval(abrirJanela, 300000);
     setInterval(fecharJanela, 310000);
 
 }
